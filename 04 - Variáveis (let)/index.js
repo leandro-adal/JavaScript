@@ -1,5 +1,5 @@
 // Não pode começar com números as variáveis.
-//Não pode conter espaços ou traços.
+// Não pode conter espaços ou traços.
 // Case-sensitive. Abc diferente de abc
 // Não pode declarar posteriormente a mesma variável com let.
 let nome = 'João';
