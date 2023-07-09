@@ -1,0 +1,11 @@
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: red;
+}
