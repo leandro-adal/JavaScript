@@ -3,4 +3,4 @@ const num2 = prompt('Digite outro número!');
 
 const resultado = parseFloat(num1) + parseFloat(num2);
 
-alert('O resultado foi: ' + resultado);
+alert(`O resultado foi: ${resultado}`);
