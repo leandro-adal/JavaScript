@@ -6,19 +6,15 @@ function imc(peso, altura) {
 }
 
 function classificacao(imc) {
-    if (imc < 18.5) {
-        return 'Abaixo do peso'
-    } else if (imc <= 18.5 && imc >= 24.9) {
-        return 'com Peso normal'
-    } else if (imc <= 25 && imc >= 29.9) {
-        return 'com Sobrepeso';
-    } else if (imc <= 30 && imc >= 34.9) {
-        return 'com Obesidade grau 1';
-    } else if (imc <= 35 && imc >= 39.9) {
-        return 'com Obesidade grau 2';
-    } else if (imc >= 40){
-        return 'com Obesidade grau 3';
-    } 
+    const nivel = ['Abaixo do peso', 'com Peso normal', 'com Sobrepeso',
+    'com Obesidade grau 1', 'com Obesidade grau 2', 'com Obesidade grau 3'];
+
+    if (imc > 39.9) return nivel[5];
+    if (imc >= 34.9) return nivel[4];
+    if (imc >= 29.9) return nivel[3];
+    if (imc >= 24.9) return nivel[2];
+    if (imc >= 18.5) return nivel[1];
+    if (imc < 18.5) return nivel[0];
 }
 
 form.addEventListener('submit', function (evento) {
