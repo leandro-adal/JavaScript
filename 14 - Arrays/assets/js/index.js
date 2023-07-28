@@ -39,6 +39,9 @@ console.log(letras[50]);
 console.log(letras.slice(0,4));
 console.log(letras.slice(0,-2)); // Tira os últimos 2 elementos
 
+// Junta as partes do array em uma string
+console.log(letras.join(' '));
+
 // Verificando o tipo da lista
 console.log(typeof letras);
 // Verificar se é uma lista
