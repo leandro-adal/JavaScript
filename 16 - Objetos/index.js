@@ -48,5 +48,22 @@ pessoa2.getDataNascimento = function() {
 console.log(pessoa2.getDataNascimento());
 
 // Instanciando um objeto ja definido
-const pessoa3 = new criarPessoa('João', 'Luiz', 30);
-console.log(pessoa3);
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+
+    this.apresentar = function() {
+        console.log(`Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos.`);
+    };
+}
+
+const pessoa3 = new Pessoa('Jose', 20);
+const pessoa4 = new Pessoa('Carla', 17);
+// O THIS É ATRELADO AO OBJETO VAZIO
+// OU SEJA, o this.algo se torna o pessoa3.algo pois se refere ao objeto que ele está representando
+pessoa4.apresentar();
+
+// Quando utilizamos o operador 'new' para criar um novo objeto a partir da função construtora,
+// o 'this' dentro da função se refere ao objeto recém-criado.
+// Portanto, ao executar 'pessoa3.apresentar()', o 'this' dentro de 'apresentar' se refere a 'pessoa3',
+// enquanto que ao executar 'pessoa4.apresentar()', o 'this' dentro de 'apresentar' se refere a 'pessoa4'.
